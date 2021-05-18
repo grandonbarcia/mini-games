@@ -1,15 +1,10 @@
-import React, { useState, useEffect, useReducer, useRef, FC, CSSProperties } from 'react'
-import { Row, Col, Button } from 'react-bootstrap'
+import React, { useState, useEffect, useRef, FC, CSSProperties } from 'react'
+import { Button } from 'react-bootstrap'
 import Counter from './Counter'
 import GameComplete from './GameComplete'
 
 
-const initialState: CSSProperties = {
-    marginLeft: '0px',
-    marginTop: '0px',
-    position: 'absolute',
-    zIndex: 10
-}
+
 
 
 

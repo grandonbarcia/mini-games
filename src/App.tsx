@@ -1,5 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import React, { FC, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import GameArea from './TargetPractice/GameArea';
@@ -9,7 +8,6 @@ import ReactionIntro from './Reaction/ReactionIntro'
 import ReactionGame from './Reaction/ReactionGame'
 import NavBar from './Navbar/Nav'
 import LandingPage from './LandingPage/index'
-import ListOfGames from './ListOfGames';
 
 
 

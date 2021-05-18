@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import ShowRecentScore from './ShowRecentScore';
 import ShowTooSoon from './ShowTooSoon';
 import GameOver from './GameOver'
