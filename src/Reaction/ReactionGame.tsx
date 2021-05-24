@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { FC, useState, useEffect } from 'react'
 import { Row, Col } from 'react-bootstrap';
 import ShowRecentScore from './ShowRecentScore';
 import ShowTooSoon from './ShowTooSoon';
@@ -8,7 +8,12 @@ const RED = '#C13C39'
 const GREEN = '#88B435'
 
 
-const ReactionGame = () => {
+type Props = {
+    startGame: (active: boolean) => void;
+}
+
+
+const ReactionGame: FC<Props> = ({ startGame }) => {
 
     const [bgColor, setBgColor] = useState(RED)
     const [text, setText] = useState('Wait For Green');
@@ -59,6 +64,12 @@ const ReactionGame = () => {
         }
 
     }, [score])
+
+    useEffect(() => {
+        return () => {
+            startGame(false);
+        }
+    }, [])
 
 
     const handleClick = () => {
