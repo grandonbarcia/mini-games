@@ -33,12 +33,12 @@ const App: FC = () => {
           </Route>
           <Route exact path='/targetPractice'>
             <GameArea>
-              {gameStarted ? <GameInProgress /> : <IntroScreen startGame={startGame} />}
+              {gameStarted ? <GameInProgress startGame={startGame} /> : <IntroScreen startGame={startGame} />}
             </GameArea>
           </Route>
           <Route exact path='/quickDraw'>
             <GameArea>
-              {gameStarted ? <ReactionGame /> : <ReactionIntro startGame={startGame} />}
+              {gameStarted ? <ReactionGame startGame={startGame} /> : <ReactionIntro startGame={startGame} />}
             </GameArea>
           </Route>
         </Switch>
