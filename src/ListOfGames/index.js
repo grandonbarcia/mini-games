@@ -4,21 +4,24 @@ import { GiFlyingTarget } from 'react-icons/gi'
 import { RiTimerFlashFill } from 'react-icons/ri'
 import { Link } from 'react-router-dom';
 
-const SIZE = 150
+
+const SIZE = '8em'
 
 const ListOfGames = () => {
-    const style = {
-        backgroundColor: '#eeeeee',
-        color: '#393e46',
-        height: '100%',
-        paddingTop: '20%',
-        borderRadius: '25px'
-    }
-    return (
 
-        <Row className='justify-content-md-center h-50' >
-            <Col as={Link} style={{ textDecoration: 'none' }} to={'/targetPractice'} className='text-center' xl={4}>
-                <div style={style}>
+    const panel = {
+        backgroundColor: 'white',
+        borderRadius: '10px',
+        height: '75%',
+        paddingTop: '2%',
+        marginTop: '50px'
+    }
+
+    return (
+        <Row className='justify-content-md-center h-50' style={{ backgroundColor: '#eeeeee' }} >
+            <Col as={Link} style={{ textDecoration: 'none', color: '#393e46' }} to={'/targetPractice'} className='text-center h-100' sm={4} md={4} lg={4} xl={4} xl={4}>
+                <div className='list__of__games' style={panel}>
+
                     <Row>
                         <Col >
                             <GiFlyingTarget size={SIZE} />
@@ -26,7 +29,7 @@ const ListOfGames = () => {
                     </Row>
                     <Row>
                         <Col>
-                            <h3>Target Practice</h3>
+                            <div className='title'>Target Practice</div>
                         </Col>
                     </Row>
                     <Row>
@@ -35,10 +38,12 @@ const ListOfGames = () => {
                         </Col>
                     </Row>
                 </div>
+
             </Col>
 
-            <Col as={Link} style={{ textDecoration: 'none' }} to={'/quickDraw'} className='text-center' xl={4}>
-                <div style={style}>
+            <Col as={Link} style={{ textDecoration: 'none', color: '#393e46' }} to={'/quickDraw'} className='text-center h-100' sm={4} md={4} lg={4} xl={4}>
+                <div className='list__of__games' style={panel}>
+
                     <Row>
                         <Col>
                             <RiTimerFlashFill size={SIZE} />
@@ -46,18 +51,20 @@ const ListOfGames = () => {
                     </Row>
                     <Row>
                         <Col>
-                            <h3>Quick Draw</h3>
+                            <div className='title'>Quick Draw</div>
                         </Col>
                     </Row>
                     <Row>
-                        <Col className='sub-title'>
-                            How fast are you on the click?
-                    </Col>
+                        <Col >
+                            <div className='sub-title'>How fast are you on the click?</div>
+                        </Col>
                     </Row>
                 </div>
+
             </Col>
 
         </Row >
+
 
 
 
