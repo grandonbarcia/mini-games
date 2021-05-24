@@ -4,11 +4,13 @@ import Counter from './Counter'
 import GameComplete from './GameComplete'
 
 
+type Props = {
+    startGame: (active: boolean) => void;
+}
 
 
 
-
-const GameInProgress: FC = () => {
+const GameInProgress: FC<Props> = ({ startGame }) => {
 
 
     const [position, setPosition] = useState({ width: '0px', height: '0px' });
@@ -118,6 +120,10 @@ const GameInProgress: FC = () => {
                 width: myRef.current.offsetWidth,
                 height: myRef.current.offsetHeight
             });
+        }
+
+        return () => {
+            startGame(false);
         }
     }, []);
 
