@@ -2,6 +2,10 @@ html, body, #root{
   height: 100vh;
 }
 
+section {
+  
+}
+
 .App {
   height: 100%;
   background-color: #393e46;
@@ -12,13 +16,20 @@ html, body, #root{
 
 }
 
+
+
 .tile{
   background-color: #eeeeee;
   color: #393e46;
   height: 100%;
 }
 
-.sub-title{
-  font-size: 19px
+.list__of__games .title{
+  font-size: 2rem
+}
+
+
+.list__of__games .sub-title{
+  font-size: 1.2rem
 }
 
