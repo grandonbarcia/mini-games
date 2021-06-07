@@ -8,11 +8,11 @@ type Props = {
 
 const ReactionIntro: FC<Props> = ({ startGame }) => {
     return (
-        <Row className='h-100' onClick={() => startGame(true)}>
+        <Row className='h-100'>
             <Col className='text-center'>
                 <h1> Reaction Time Test </h1>
                 <h4>When  the red box turns green, click as quickly as you can.</h4>
-                <h4>Click anywhere to start.</h4>
+                <Button onClick={() => startGame(true)}>Start</Button>
             </Col>
         </Row>
     )
