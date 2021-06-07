@@ -19,11 +19,10 @@ const ListOfGames = () => {
 
     return (
         <Row className='justify-content-md-center h-50' style={{ backgroundColor: '#eeeeee' }} >
-            <Col as={Link} style={{ textDecoration: 'none', color: '#393e46' }} to={'/targetPractice'} className='text-center h-100' sm={4} md={4} lg={4} xl={4} xl={4}>
+            <Col as={Link} style={{ textDecoration: 'none', color: '#393e46' }} to={'/targetPractice'} className='text-center h-100' sm={4} md={4} lg={4} xl={4} xl={3}>
                 <div className='list__of__games' style={panel}>
-
                     <Row>
-                        <Col >
+                        <Col>
                             <GiFlyingTarget size={SIZE} />
                         </Col>
                     </Row>
@@ -38,12 +37,10 @@ const ListOfGames = () => {
                         </Col>
                     </Row>
                 </div>
-
             </Col>
 
-            <Col as={Link} style={{ textDecoration: 'none', color: '#393e46' }} to={'/quickDraw'} className='text-center h-100' sm={4} md={4} lg={4} xl={4}>
+            <Col as={Link} style={{ textDecoration: 'none', color: '#393e46' }} to={'/quickDraw'} className='text-center h-100' sm={4} md={4} lg={4} xl={3}>
                 <div className='list__of__games' style={panel}>
-
                     <Row>
                         <Col>
                             <RiTimerFlashFill size={SIZE} />
@@ -60,9 +57,7 @@ const ListOfGames = () => {
                         </Col>
                     </Row>
                 </div>
-
             </Col>
-
         </Row >
 
 
