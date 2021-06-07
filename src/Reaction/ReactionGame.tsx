@@ -39,12 +39,12 @@ const ReactionGame: FC<Props> = ({ startGame }) => {
 
             if (!gamePause && bgColor === RED) {
 
-                const randomTime = Math.floor(Math.random() * 8) + 3
+                const randomNum = Math.floor(Math.random() * 8) + 3
                 const timeout = setTimeout(() => {
                     setBgColor(GREEN);
                     setText('Click!');
                     setStartTime(new Date().valueOf())
-                }, 3000);
+                }, randomNum * 1000);
 
                 return () => clearTimeout(timeout);
             }
@@ -95,6 +95,7 @@ const ReactionGame: FC<Props> = ({ startGame }) => {
     }
 
     const unPauseGame = () => {
+        setTooSoon(false);
         pauseGame(false);
     }
 
